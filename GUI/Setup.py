@@ -4,7 +4,7 @@
 # thư viện sys làm việc với hệ thống làm việc với đối số
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel
-from PyQt5.QtGui import QIcon , QFont# setup favicon
+from PyQt5.QtGui import QIcon , QFont,QPixmap# setup favicon
 from PyQt5.QtCore import Qt
 
 # Qt.widgets dùng để tạo giao diện, nút bấm, cửa sổ, layout
@@ -23,9 +23,9 @@ class MainWindow(QMainWindow):
         #
         label = QLabel("Hello PTIT", self)
         label.setFont(QFont("Arial", 25))
-        label.setGeometry(0, 0, 1000, 100)
+        label.setGeometry(0, 0, 450, 450)
         label.setStyleSheet("color: blue;"
-                            "background-color: yellow;"
+                            "background-color: white;"
                             "font-weight: bold;"
                             "text-decoration: underline;")
         #label.setAlignment(Qt.AlignBottom)
@@ -33,8 +33,13 @@ class MainWindow(QMainWindow):
         #label.setAlignment(Qt.AlignVCenter)
         #label.setAlignment(Qt.AlignRight) #lefft
         #label.setAlignment(Qt.AlignHCenter)
-        label.setAlignment(Qt.AlignHCenter | Qt.AlignTop)
+        #label.setAlignment(Qt.AlignHCenter | Qt.AlignTop)
         # tọa độ
+        pixmap = QPixmap("Logo_PTIT_University.png")
+        label.setPixmap(pixmap)
+        label.setScaledContents(True)
+        label.setGeometry((self.width() - label.width()) // 2, (self.height() - label.height()) //2,
+                          label.width(), label.height())
 def main():
     app = QApplication(sys.argv)
     window = MainWindow()
