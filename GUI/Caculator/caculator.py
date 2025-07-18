@@ -62,6 +62,8 @@ class Caculator(QWidget):
                                    }
                                """)
             button.clicked.connect(lambda _, t=text: self.on_button_click(t))
+            # nếu khoggasn text vào t thì lambda sẽ nhận giá trị cuối ví dụ
+            # từ 1 đến 9 nó sẽ lưu số 9
             grid.addWidget(button, row, col)
         # add phần line_edit
         vbox = QVBoxLayout()
