@@ -51,7 +51,7 @@ if __name__ == "__main__":
         count += 1
         while is_start:
             guesses_wrong = 3 # được đoán 3 lần
-            on_music(file_path, 10)
+            on_music(file_path, 40)
             guessed = set()
             s = input("Do you want to listen again (y/n) :").lower()
             if s == 'y' or s == 'Y':
