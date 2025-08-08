@@ -1,0 +1,17 @@
+{
+    "employee": {
+        "name": "John Doe",
+        "age": 28,
+        "department": "Data Science",
+        "skills": [
+            "Python",
+            "SQL",
+            "Pandas"
+        ],
+        "location": {
+            "city": "Bangalore",
+            "country": "India"
+        },
+        "experience": 5
+    }
+}
