@@ -18,7 +18,8 @@ dest_not = cv2.bitwise_not(img2, img1, mask = None)
 
 cv2.imshow("anh 1", img1)
 cv2.imshow("anh 2", img2)
-cv2.imshow("anh dest_and", dest_and)
+cv2.imshow("anh dest_and", dest_xor)
+
 #0xff == 27 la nut esc
 if cv2.waitKey(0) & 0xff == 27:
     cv2.destroyAllWindows()

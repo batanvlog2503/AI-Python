@@ -22,6 +22,8 @@ print("Số phần tử:", img.size)            # tổng số pixel * số kênh
 print("Chiều cao (rows):", img.shape[0])  # số hàng
 print("Chiều rộng (cols):", img.shape[1]) # số cột
 print("Số kênh:", img.shape[2])
+print(img.dtype)
+
 
 # truy cập vùng ảnh
 # roi = img[y1:y2, x1:x2] hàng y1 đến y2 và x cũng vậy
